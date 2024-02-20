@@ -1,4 +1,4 @@
-// Events HTML
+// Events HTML.
 console.log('This is outside of HTML')
 // option1
 {/* <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button> */}

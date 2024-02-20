@@ -1,3 +1,4 @@
+// Event Summary HTML
 // Option 1
 function handleOnClick(){
     const handlerStatus = document.getElementById('handler-status')
