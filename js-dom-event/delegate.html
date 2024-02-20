@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Ad, aliquam quibusdam.</li>
+            <li class="item">Eaque, doloremque error.</li>
+            <li class="item">Fugit, sint quisquam.</li>
+            <li class="item">Dolorum, hic exercitationem?</li>
+            <li class="item">Debitis, deserunt cumque.</li>
+        </ul>
+        <button id="btn-add-item">Add New Item</button>
+    </section>
+
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // for(const item of items){
+        //     item.addEventListener('click', function(event){
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+        // }
+
+        document.getElementById('list-container').addEventListener('click', function(event){
+            // console.log(event.target)
+            // event.target.parentNode.removeChild(event.target);
+            event.target.remove();
+        })
+
+        document.getElementById('btn-add-item').addEventListener('click', function(){
+            const listConatainer = document.getElementById('list-container')
+            const li = document.createElement('li')
+            li.innerText = 'my name is siam'
+            li.classList.add('item')
+            listConatainer.appendChild(li)
+            // console.log(listConatainer)
+        })
+    </script>
+</body>
+</html>

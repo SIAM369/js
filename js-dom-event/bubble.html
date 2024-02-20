@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <ul id="ul-item">
+            <li id="item-1">Lorem ipsum dolor sit amet consectetur.</li>
+            <li id="item-2">Eos a excepturi exercitationem blanditiis dolores.</li>
+            <li id="item-3">Inventore non ullam magni? Sequi, cum!</li>
+            <li id="item-4">Beatae soluta nam dolor voluptatibus saepe!</li>
+            <li id="item-5">Aliquid repudiandae quidem facilis ab. Culpa.</li>
+            <li id="item-6">Voluptatibus sed eveniet pariatur. Doloremque, eveniet.</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 is clicked')
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 is clicked 2nd')
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 is clicked 3rd')
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 is clicked 4th')
+        })
+
+        document.getElementById('ul-item').addEventListener('click', function(){
+            console.log('UL is clicked')
+        })
+    </script>
+</body>
+</html>

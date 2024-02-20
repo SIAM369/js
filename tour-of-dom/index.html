@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        li{
+            color: blue;
+        }
+
+        .fruits-box li{
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome SIAM</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim totam tempore, voluptate tempora quod, quibusdam, iure facilis saepe iste voluptas illo beatae dolor fugit nihil quos quidem repudiandae non ea!</p>
+    </header>
+    <main id="main-content">
+        <section>
+            <h1>My awesome DOM is here</h1>
+        <ul>
+            <li>Cricket</li>
+            <li>Football</li>
+            <li>Tennis</li>
+        </ul>
+        </section>
+        <section class="fruits-box" id="fol">
+            <h1 id="fruitsTitle" class="ti tle random">Fruits I like: </h1>
+            <ul>
+                <li class="fav-fruits">Mango</li>
+                <li class="fav-fruits">Banana</li>
+                <li>Orange</li>
+                <li>Grape</li>
+            </ul>
+        </section>
+        <section id="places">
+            <h1>Places I like to visit: </h1>
+            <ul id="places-list">
+                <li>Cox's Bazar</li>
+                <li>Rangamati</li>
+                <li>Bandarban</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleJS.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        for(const li of liCollection){
+            // console.log(li.innerText);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const h1 of allHeadings){
+            // console.log(h1.innerText);
+        }
+        
+        const favFruits = document.getElementsByClassName('fav-fruits');
+        // console.log(favFruits);
+
+        for(fruits of favFruits){
+            // console.log(fruits.innerText);
+        }
+
+        // const lists = document.querySelector('.fruits-box li');
+        // console.log(lists);
+        // for ( const li of lists){
+        //      console.log(li.innerText);
+        // }
+
+        
+    </script>
+</body>
+</html>
